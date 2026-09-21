@@ -303,6 +303,8 @@ document.getElementById('project-form')?.addEventListener('submit', function(e){
     'Target price: ' + (d.get('target') || 'Not provided'),
     'Delivery: ' + (d.get('delivery') || 'Not provided'),
     'Development stage: ' + d.get('stage'),
+    'Buyer country: ' + (d.get('country') || 'Not provided'),
+    'Preferred contact: ' + d.get('contact'),
     '',
     'Project details:',
     d.get('details')
