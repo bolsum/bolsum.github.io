@@ -66,9 +66,12 @@
   
 
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Crect width=%27100%27 height=%27100%27 fill=%27%2311110f%27/%3E%3Ctext x=%2750%27 y=%2763%27 text-anchor=%27middle%27 font-family=%27Georgia%27 font-size=%2754%27 fill=%27%23f5f1ea%27%3EB%3C/text%3E%3C/svg%3E">
-<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+<link rel="dns-prefetch" href="//images.unsplash.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet"></noscript>
 <style>
 :root{--ink:#11110f;--cream:#f5f1ea;--paper:#fbfaf7;--sand:#ded2c2;--accent:#a55f3d;--muted:#706d67;--line:#d8d1c7}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font:400 15px/1.65 "DM Sans",sans-serif}a{text-decoration:none;color:inherit}.skip-link{position:absolute;left:-9999px;top:12px;z-index:100;padding:10px 14px;background:var(--ink);color:#fff}.skip-link:focus{left:12px}.nav a:focus-visible,.btn:focus-visible,.socialbar a:focus-visible,.brand:focus-visible{outline:2px solid var(--accent);outline-offset:4px}.container{width:min(1280px,calc(100% - 64px));margin:auto}
@@ -89,7 +92,7 @@ footer{padding:34px 0;display:flex;justify-content:space-between;color:var(--mut
 @media(max-width:900px){.container{width:min(100% - 34px,1280px)}.nav{display:none}.hero{grid-template-columns:1fr;padding:60px 0}.heroart{height:440px}.split,.trust,.expertise,.briefgrid{grid-template-columns:1fr;gap:45px}.services{grid-template-columns:1fr}.workflow{grid-template-columns:repeat(2,1fr);gap:24px}.stats{grid-template-columns:repeat(2,1fr)}.stat{border-bottom:1px solid var(--line);padding-bottom:18px}.contact{padding:55px 30px;grid-template-columns:1fr}.contact .btn{width:max-content}section{padding:78px 0}.trustpanel{min-height:400px}.visual-grid{grid-template-columns:1fr}.visual-card{height:340px}.capability-showcase{grid-template-columns:1fr}footer{display:block}footer span{display:block;margin-top:9px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{scroll-behavior:auto!important;transition:none!important}}
 @media(max-width:520px){.hero h1{font-size:59px}.heroart{height:390px}.artcopy strong{font-size:40px}.services{margin-top:40px}.service{min-height:220px}.service h3{margin-top:40px}.stats{grid-template-columns:1fr 1fr}.workflow{grid-template-columns:1fr 1fr}.checklist{grid-template-columns:1fr}.trustpanel{padding:32px}.trustpanel h3{font-size:39px}}
-</style>
+.heroart,.poster,.visual-card{background-repeat:no-repeat}img{max-width:100%;height:auto}img{content-visibility:auto}\n</style>
 </head>
 <body>
 <a class="skip-link" href="#main-content">Skip to main content</a>
