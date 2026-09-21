@@ -301,6 +301,8 @@ document.getElementById('project-form')?.addEventListener('submit', function(e){
     'Product: ' + d.get('product'),
     'Quantity: ' + (d.get('quantity') || 'Not provided'),
     'Target price: ' + (d.get('target') || 'Not provided'),
+    'Delivery: ' + (d.get('delivery') || 'Not provided'),
+    'Development stage: ' + d.get('stage'),
     '',
     'Project details:',
     d.get('details')
