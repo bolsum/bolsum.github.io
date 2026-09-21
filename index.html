@@ -105,6 +105,11 @@ footer{padding:34px 0;display:flex;justify-content:space-between;color:var(--mut
 @media(max-width:700px){.project-form .form-grid{grid-template-columns:1fr}}
 
 .footer-links{display:flex;flex-wrap:wrap;gap:.8rem 1.4rem;margin-top:1rem}.footer-links a{color:inherit;opacity:.65;text-decoration:none}.footer-links a:hover{opacity:1;text-decoration:underline}
+
+.package-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(20,20,20,.14);margin-top:2rem}.package{background:#f7f5f0;padding:28px}.package h3{margin:.35rem 0 .6rem;font-size:1.15rem}.package p{font-size:.9rem;opacity:.72}.package ul{margin:1rem 0 0;padding-left:1.1rem;font-size:.86rem}.package li{margin:.35rem 0}
+.trust-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(20,20,20,.14);margin-top:2rem}.trust-item{background:#f7f5f0;padding:25px}.trust-item b{display:block;margin-bottom:.45rem}.trust-item p{font-size:.85rem;opacity:.72;margin:0}
+@media(max-width:850px){.package-grid{grid-template-columns:1fr}.trust-grid{grid-template-columns:1fr 1fr}}@media(max-width:520px){.trust-grid{grid-template-columns:1fr}}
+
 </style>
 </head>
 <body>
@@ -217,6 +222,17 @@ footer{padding:34px 0;display:flex;justify-content:space-between;color:var(--mut
 </section>
 
 
+<section id="buyer-trust"><div class="split"><div><div class="label">Why BOLSUM</div><h2 class="title">Built for buyers who need things coordinated.</h2><p class="muted">Sourcing is more than finding a factory. BOLSUM brings product development, commercial review, sampling and production follow-up into one coordinated workflow from Bangladesh.</p></div><div class="trust-grid">
+<div class="trust-item"><b>01 · Product detail</b><p>We work through fabric, construction, trims, artwork, wash and sample requirements.</p></div>
+<div class="trust-item"><b>02 · Commercial clarity</b><p>Costing is reviewed around materials, quantities, decoration and target pricing.</p></div>
+<div class="trust-item"><b>03 · Responsive coordination</b><p>One sourcing contact helps keep buyer, supplier and development communication aligned.</p></div>
+<div class="trust-item"><b>04 · Production follow-up</b><p>Support continues beyond sampling into supplier coordination and order follow-up.</p></div>
+</div></div></section>
+<section id="service-packages"><div class="label">How BOLSUM can support</div><h2 class="title">Flexible support for<br>different buying stages.</h2><div class="package-grid">
+<div class="package"><div class="label">01 · Develop</div><h3>Product Development</h3><p>For buyers with a product idea, reference or tech pack.</p><ul><li>Material & construction review</li><li>Supplier development</li><li>Prototype coordination</li><li>Sample feedback</li></ul></div>
+<div class="package"><div class="label">02 · Source</div><h3>Sourcing & Costing</h3><p>For buyers who need practical supplier and commercial support.</p><ul><li>Supplier coordination</li><li>Fabric & trim sourcing</li><li>Garment costing</li><li>Quotation alignment</li></ul></div>
+<div class="package"><div class="label">03 · Follow</div><h3>Production Follow-up</h3><p>For buyers who need ongoing coordination after order placement.</p><ul><li>Production communication</li><li>Order follow-up</li><li>Quality coordination</li><li>Delivery follow-up</li></ul></div>
+</div></section>
 <section class="brief" id="project-brief">
 <div class="briefgrid"><div><div class="label">07 — Ready to develop?</div><h2 class="title">Bring us the<br>brief.</h2><p class="lead">Tell us what you are developing, and we will take it from there.</p><p class="muted">You do not need a perfect tech pack. Share your product idea, reference, target cost, quantity or delivery requirement. The more detail you have, the faster we can map the right sourcing route.</p></div>
 <div>
