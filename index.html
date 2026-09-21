@@ -3,6 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#11110f">
+<meta name="author" content="BOLSUM">
+<meta name="application-name" content="BOLSUM">
+<meta name="format-detection" content="telephone=no">
 <meta name="google-site-verification" content="u5rjt4JuYGZ0iPH9RoaJSlfr1ixd9YvlLqUrK6Kptjw">
 <title>BOLSUM | Global Sourcing & Product Development</title>
 
@@ -18,6 +22,7 @@
 <meta property="og:description" content="Global sourcing and product development from Bangladesh — from product idea and sampling to costing and production follow-up.">
 <meta property="og:url" content="https://bolsum.github.io/">
 <meta property="og:site_name" content="BOLSUM">
+<meta property="og:locale" content="en_US">
 
 <!-- Twitter / X -->
 <meta name="twitter:card" content="summary">
@@ -28,12 +33,33 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "BOLSUM",
-  "description": "Global sourcing and product development company based in Bangladesh.",
-  "url": "https://bolsum.github.io/",
-  "sameAs": [
-    "https://www.linkedin.com/in/bokulr"
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://bolsum.github.io/#organization",
+      "name": "BOLSUM",
+      "description": "Bangladesh-based global sourcing and product development partner for apparel and lifestyle businesses.",
+      "url": "https://bolsum.github.io/",
+      "sameAs": ["https://www.linkedin.com/in/bokulr"]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://bolsum.github.io/#website",
+      "url": "https://bolsum.github.io/",
+      "name": "BOLSUM | Global Sourcing & Product Development",
+      "publisher": {"@id": "https://bolsum.github.io/#organization"},
+      "inLanguage": "en"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://bolsum.github.io/#webpage",
+      "url": "https://bolsum.github.io/",
+      "name": "BOLSUM | Global Sourcing & Product Development",
+      "description": "Bangladesh-based apparel sourcing and product development support covering sourcing, sampling, costing, supplier coordination and production follow-up.",
+      "isPartOf": {"@id": "https://bolsum.github.io/#website"},
+      "about": {"@id": "https://bolsum.github.io/#organization"},
+      "inLanguage": "en"
+    }
   ]
 }
 </script>
@@ -45,7 +71,7 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{--ink:#11110f;--cream:#f5f1ea;--paper:#fbfaf7;--sand:#ded2c2;--accent:#a55f3d;--muted:#706d67;--line:#d8d1c7}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font:400 15px/1.65 "DM Sans",sans-serif}a{text-decoration:none;color:inherit}.container{width:min(1280px,calc(100% - 64px));margin:auto}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font:400 15px/1.65 "DM Sans",sans-serif}a{text-decoration:none;color:inherit}.skip-link{position:absolute;left:-9999px;top:12px;z-index:100;padding:10px 14px;background:var(--ink);color:#fff}.skip-link:focus{left:12px}.nav a:focus-visible,.btn:focus-visible,.socialbar a:focus-visible,.brand:focus-visible{outline:2px solid var(--accent);outline-offset:4px}.container{width:min(1280px,calc(100% - 64px));margin:auto}
 nav{height:86px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);position:relative;z-index:5}.brand{font-weight:700;letter-spacing:.27em;font-size:21px}.brand small{display:block;font-size:7px;letter-spacing:.25em;font-weight:500;margin-top:-2px;color:var(--accent)}.nav{display:flex;gap:29px;font-size:11px;letter-spacing:.1em;text-transform:uppercase}.nav a{opacity:.68}.nav a:hover{opacity:1;color:var(--accent)}
 .hero{min-height:720px;display:grid;grid-template-columns:1fr .92fr;align-items:center;gap:70px;padding:78px 0}.kicker,.label{font-size:10px;letter-spacing:.23em;text-transform:uppercase;color:var(--accent);font-weight:700}.hero h1{font:600 clamp(58px,7.2vw,104px)/.9 "Playfair Display",serif;letter-spacing:-.06em;margin:23px 0 30px}.hero h1 em{color:var(--accent);font-weight:500}.hero p{font-size:18px;line-height:1.7;color:var(--muted);max-width:610px}.actions{display:flex;gap:11px;margin-top:34px;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 21px;border:1px solid var(--ink);font-size:10px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;transition:.22s}.btn.dark{background:var(--ink);color:#fff}.btn:hover{transform:translateY(-2px)}
 .heroart{height:570px;background:#171715 url("https://images.unsplash.com/photo-1523381210434-271e8be1f52b?auto=format&fit=crop&w=1200&q=85") center/cover;position:relative;overflow:hidden}.heroart:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(17,17,15,.82),rgba(17,17,15,.18));z-index:1}.heroart:after{content:"";position:absolute;inset:28px;border:1px solid rgba(255,255,255,.28);z-index:2}.vertical{position:absolute;right:17px;top:38px;color:#fff;writing-mode:vertical-rl;text-transform:uppercase;letter-spacing:.25em;font-size:8px;z-index:3}.heroart .tag{position:absolute;top:40px;left:40px;color:#fff;font-size:9px;letter-spacing:.18em;text-transform:uppercase;z-index:3}.artcopy{position:absolute;left:40px;bottom:38px;color:#fff;z-index:3}.artcopy small{display:block;letter-spacing:.2em;text-transform:uppercase;font-size:9px;margin-bottom:12px;color:#d7cbbd}.artcopy strong{font:600 48px/.94 "Playfair Display",serif}.artnum{position:absolute;right:43px;bottom:35px;color:rgba(255,255,255,.16);font-size:125px;font-weight:700;letter-spacing:-.1em}
@@ -61,16 +87,19 @@ footer{padding:34px 0;display:flex;justify-content:space-between;color:var(--mut
 .visual-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px}.visual-card{height:420px;position:relative;overflow:hidden;background-size:cover;background-position:center;color:#fff}.visual-card:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.78),rgba(0,0,0,.05) 65%)}.visual-card>div{position:absolute;z-index:2;left:28px;bottom:28px}.visual-card span{display:block;font-size:8px;letter-spacing:.2em;color:#ded2c2;margin-bottom:12px}.visual-card strong{font:600 34px/.95 "Playfair Display",serif}.fabric{background-image:url("https://images.unsplash.com/photo-1520975958225-6d7d1d6c9f5d?auto=format&fit=crop&w=900&q=85")}.development{background-image:url("https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?auto=format&fit=crop&w=900&q=85")}.production{background-image:url("https://images.unsplash.com/photo-1582735689369-4fe89db7114c?auto=format&fit=crop&w=900&q=85")}
 .capability-showcase{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:55px}.cap-card{background:var(--paper);border:1px solid var(--line);padding:30px;min-height:245px;position:relative}.cap-card .num{font-size:9px;letter-spacing:.2em;color:var(--accent)}.cap-card h3{font:600 28px "Playfair Display",serif;margin:48px 0 10px}.cap-card p{color:var(--muted);font-size:12px;margin:0}.cap-card .arrow{position:absolute;right:24px;top:25px;font-size:18px}.socialbar{display:flex;gap:10px;margin-top:25px;flex-wrap:wrap}.socialbar a{border:1px solid rgba(255,255,255,.25);padding:11px 15px;font-size:10px;letter-spacing:.1em;text-transform:uppercase}.socialbar a:hover{background:#fff;color:var(--ink)}.floating-mail{position:fixed;right:22px;bottom:22px;z-index:20;background:var(--ink);color:#fff;border-radius:999px;padding:13px 17px;font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
 @media(max-width:900px){.container{width:min(100% - 34px,1280px)}.nav{display:none}.hero{grid-template-columns:1fr;padding:60px 0}.heroart{height:440px}.split,.trust,.expertise,.briefgrid{grid-template-columns:1fr;gap:45px}.services{grid-template-columns:1fr}.workflow{grid-template-columns:repeat(2,1fr);gap:24px}.stats{grid-template-columns:repeat(2,1fr)}.stat{border-bottom:1px solid var(--line);padding-bottom:18px}.contact{padding:55px 30px;grid-template-columns:1fr}.contact .btn{width:max-content}section{padding:78px 0}.trustpanel{min-height:400px}.visual-grid{grid-template-columns:1fr}.visual-card{height:340px}.capability-showcase{grid-template-columns:1fr}footer{display:block}footer span{display:block;margin-top:9px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{scroll-behavior:auto!important;transition:none!important}}
 @media(max-width:520px){.hero h1{font-size:59px}.heroart{height:390px}.artcopy strong{font-size:40px}.services{margin-top:40px}.service{min-height:220px}.service h3{margin-top:40px}.stats{grid-template-columns:1fr 1fr}.workflow{grid-template-columns:1fr 1fr}.checklist{grid-template-columns:1fr}.trustpanel{padding:32px}.trustpanel h3{font-size:39px}}
 </style>
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
 <div class="container">
-<nav>
+<nav aria-label="Primary navigation">
 <a class="brand" href="#">BOLSUM<small>GLOBAL SOURCING</small></a>
-<div class="nav"><a href="#about">About</a><a href="#services">Services</a><a href="#expertise">Expertise</a><a href="#process">Process</a><a href="#contact">Contact</a><a href="https://www.linkedin.com/in/bokulr" target="_blank" rel="noopener">LinkedIn ↗</a></div>
+<div class="nav"><a href="#about">About</a><a href="#services">Services</a><a href="#expertise">Expertise</a><a href="#process">Process</a><a href="#contact">Contact</a><a href="https://www.linkedin.com/in/bokulr" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a></div>
 </nav>
 
+<main id="main-content">
 <header class="hero">
 <div>
 <div class="kicker">Bangladesh · Global Sourcing · Product Development</div>
@@ -152,6 +181,7 @@ footer{padding:34px 0;display:flex;justify-content:space-between;color:var(--mut
 <div class="contact"><div><div class="label">08 — Start a conversation</div><h2 class="title">Have a product<br>to develop?</h2><p>Send a tech pack, product brief or simply the idea. We can discuss the right sourcing and development route for your project.</p><div class="email">Email <a href="mailto:bokul19@gmail.com">bokul19@gmail.com</a></div><div class="socialbar"><a href="mailto:bokul19@gmail.com?subject=BOLSUM%20Sourcing%20Inquiry">Email BOLSUM ↗</a><a href="https://wa.me/8801811827314?text=Hello%20BOLSUM%2C%20I%27d%20like%20to%20discuss%20a%20sourcing%20project." target="_blank" rel="noopener">WhatsApp ↗</a><a href="https://www.linkedin.com/in/bokulr" target="_blank" rel="noopener">LinkedIn ↗</a></div></div><a class="btn" href="https://wa.me/8801811827314?text=Hello%20BOLSUM%2C%20I%27d%20like%20to%20discuss%20a%20sourcing%20project." target="_blank" rel="noopener">WhatsApp ↗</a></div>
 </section>
 
+</main>
 <footer><strong>BOLSUM</strong><span>Global Sourcing & Product Development · Bangladesh</span><span>© 2026 BOLSUM</span></footer>
 </div>
 </body>
