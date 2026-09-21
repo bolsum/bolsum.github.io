@@ -93,7 +93,18 @@ footer{padding:34px 0;display:flex;justify-content:space-between;color:var(--mut
 @media(max-width:900px){.container{width:min(100% - 34px,1280px)}.nav{display:none}.hero{grid-template-columns:1fr;padding:60px 0}.heroart{height:440px}.split,.trust,.expertise,.briefgrid{grid-template-columns:1fr;gap:45px}.services{grid-template-columns:1fr}.workflow{grid-template-columns:repeat(2,1fr);gap:24px}.stats{grid-template-columns:repeat(2,1fr)}.stat{border-bottom:1px solid var(--line);padding-bottom:18px}.contact{padding:55px 30px;grid-template-columns:1fr}.contact .btn{width:max-content}section{padding:78px 0}.trustpanel{min-height:400px}.visual-grid{grid-template-columns:1fr}.visual-card{height:340px}.capability-showcase{grid-template-columns:1fr}footer{display:block}footer span{display:block;margin-top:9px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{scroll-behavior:auto!important;transition:none!important}}
 @media(max-width:520px){.hero h1{font-size:59px}.heroart{height:390px}.artcopy strong{font-size:40px}.services{margin-top:40px}.service{min-height:220px}.service h3{margin-top:40px}.stats{grid-template-columns:1fr 1fr}.workflow{grid-template-columns:1fr 1fr}.checklist{grid-template-columns:1fr}.trustpanel{padding:32px}.trustpanel h3{font-size:39px}}
-.heroart,.poster,.visual-card{background-repeat:no-repeat}img{max-width:100%;height:auto}img{content-visibility:auto}\n</style>
+.heroart,.poster,.visual-card{background-repeat:no-repeat}img{max-width:100%;height:auto}img{content-visibility:auto}\n
+.project-form{margin-top:2rem;display:grid;gap:1rem}
+.project-form .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.project-form label{display:grid;gap:.45rem;font-size:.82rem;font-weight:600;letter-spacing:.02em}
+.project-form input,.project-form select,.project-form textarea{width:100%;box-sizing:border-box;border:1px solid rgba(20,20,20,.18);background:#fff;padding:.9rem 1rem;font:inherit;border-radius:0;color:inherit}
+.project-form textarea{min-height:120px;resize:vertical}
+.project-form input:focus,.project-form select:focus,.project-form textarea:focus{outline:2px solid currentColor;outline-offset:2px}
+.project-form .form-actions{display:flex;flex-wrap:wrap;gap:.8rem;align-items:center}
+.project-form .form-note{font-size:.78rem;opacity:.68;margin:0}
+@media(max-width:700px){.project-form .form-grid{grid-template-columns:1fr}}
+
+</style>
 </head>
 <body>
 <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -198,9 +209,28 @@ footer{padding:34px 0;display:flex;justify-content:space-between;color:var(--mut
 </div>
 </section>
 
-<section class="brief">
-<div class="briefgrid"><div><div class="label">07 — Ready to develop?</div><h2 class="title">Bring us the<br>brief.</h2><p class="lead">You do not need to have every answer before starting.</p><p class="muted">Share your tech pack, reference garment, sketches, target price or simply the product idea. We can start by understanding what you need and mapping the next practical step.</p></div>
-<div><div class="label">What you can send</div><div class="checklist"><div class="check"><b>Tech pack</b>Measurements & construction</div><div class="check"><b>Product brief</b>Category & target market</div><div class="check"><b>Reference</b>Image or existing garment</div><div class="check"><b>Target price</b>Commercial direction</div><div class="check"><b>Fabric idea</b>Composition, GSM or handfeel</div><div class="check"><b>Quantity</b>Estimated order requirement</div></div></div></div>
+
+<section class="brief" id="project-brief">
+<div class="briefgrid"><div><div class="label">07 — Ready to develop?</div><h2 class="title">Bring us the<br>brief.</h2><p class="lead">Tell us what you are developing, and we will take it from there.</p><p class="muted">You do not need a perfect tech pack. Share your product idea, reference, target cost, quantity or delivery requirement. The more detail you have, the faster we can map the right sourcing route.</p></div>
+<div>
+<div class="label">Start your project</div>
+<form class="project-form" id="project-form">
+  <div class="form-grid">
+    <label>Name<input name="name" autocomplete="name" required placeholder="Your name"></label>
+    <label>Company<input name="company" autocomplete="organization" placeholder="Brand / company"></label>
+  </div>
+  <div class="form-grid">
+    <label>Email<input type="email" name="email" autocomplete="email" required placeholder="you@company.com"></label>
+    <label>Product<select name="product"><option value="T-shirt / top">T-shirt / top</option><option value="Hoodie / sweatshirt">Hoodie / sweatshirt</option><option value="Bottoms">Bottoms</option><option value="Polo">Polo</option><option value="Casualwear">Casualwear</option><option value="Other apparel">Other apparel</option></select></label>
+  </div>
+  <div class="form-grid">
+    <label>Quantity<input name="quantity" inputmode="numeric" placeholder="Estimated quantity"></label>
+    <label>Target price<input name="target" placeholder="Target price / currency"></label>
+  </div>
+  <label>Project details<textarea name="details" required placeholder="Tell us about the product, fabric, artwork, sample or delivery requirement..."></textarea></label>
+  <div class="form-actions"><button class="btn" type="submit">Send Project Brief ↗</button><p class="form-note">Your brief opens in WhatsApp for direct discussion.</p></div>
+</form>
+</div></div>
 </section>
 
 
@@ -221,11 +251,33 @@ footer{padding:34px 0;display:flex;justify-content:space-between;color:var(--mut
 </section>
 
 <section id="contact">
-<div class="contact"><div><div class="label">08 — Start a conversation</div><h2 class="title">Have a product<br>to develop?</h2><p>Send a tech pack, product brief or simply the idea. We can discuss the right sourcing and development route for your project.</p><div class="email">Email <a href="mailto:bokul19@gmail.com">bokul19@gmail.com</a></div><div class="socialbar"><a href="mailto:bokul19@gmail.com?subject=BOLSUM%20Sourcing%20Inquiry">Email BOLSUM ↗</a><a href="https://wa.me/8801811827314?text=Hello%20BOLSUM%2C%20I%27d%20like%20to%20discuss%20a%20sourcing%20project." target="_blank" rel="noopener">WhatsApp ↗</a><a href="https://www.linkedin.com/in/bokulr" target="_blank" rel="noopener">LinkedIn ↗</a></div></div><a class="btn" href="https://wa.me/8801811827314?text=Hello%20BOLSUM%2C%20I%27d%20like%20to%20discuss%20a%20sourcing%20project." target="_blank" rel="noopener">WhatsApp ↗</a></div>
+<div class="contact"><div><div class="label">08 — Start a conversation</div><h2 class="title">Have a product<br>to develop?</h2><p>Send a tech pack, product brief or simply the idea. We can discuss the right sourcing and development route for your project.</p><div class="email">Email <a href="mailto:bokul19@gmail.com">bokul19@gmail.com</a></div><div class="socialbar"><a href="mailto:bokul19@gmail.com?subject=BOLSUM%20Sourcing%20Inquiry">Email BOLSUM ↗</a><a href="https://wa.me/8801811827314?text=Hello%20BOLSUM%2C%20I%27d%20like%20to%20discuss%20a%20sourcing%20project." target="_blank" rel="noopener">WhatsApp ↗</a><a href="https://www.linkedin.com/in/bokulr" target="_blank" rel="noopener">LinkedIn ↗</a></div></div><a class="btn" href="#project-brief">Start a Project ↗</a></div>
 </section>
 
 </main>
 <footer><strong>BOLSUM</strong><span>Global Sourcing & Product Development · Bangladesh</span><span>© 2026 BOLSUM</span></footer>
 </div>
+
+<script>
+document.getElementById('project-form')?.addEventListener('submit', function(e){
+  e.preventDefault();
+  const d = new FormData(this);
+  const msg = [
+    'Hello BOLSUM, I would like to discuss a sourcing project.',
+    '',
+    'Name: ' + d.get('name'),
+    'Company: ' + (d.get('company') || 'Not provided'),
+    'Email: ' + d.get('email'),
+    'Product: ' + d.get('product'),
+    'Quantity: ' + (d.get('quantity') || 'Not provided'),
+    'Target price: ' + (d.get('target') || 'Not provided'),
+    '',
+    'Project details:',
+    d.get('details')
+  ].join('\n');
+  window.open('https://wa.me/8801811827314?text=' + encodeURIComponent(msg), '_blank', 'noopener');
+});
+</script>
+
 </body>
 </html>
