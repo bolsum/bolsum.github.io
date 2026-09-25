@@ -1,36 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- BOLSUM sitemap refresh 2026-09-25 -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://bolsum.github.io/</loc>
-    <lastmod>2026-09-25</lastmod>
-  </url>
-  <url>
-    <loc>https://bolsum.github.io/apparel-sourcing-bangladesh.html</loc>
-    <lastmod>2026-09-25</lastmod>
-  </url>
-  <url>
-    <loc>https://bolsum.github.io/knitwear-sourcing.html</loc>
-    <lastmod>2026-09-25</lastmod>
-  </url>
-  <url>
-    <loc>https://bolsum.github.io/apparel-product-development.html</loc>
-    <lastmod>2026-09-25</lastmod>
-  </url>
-  <url>
-    <loc>https://bolsum.github.io/apparel-sampling.html</loc>
-    <lastmod>2026-09-25</lastmod>
-  </url>
-  <url>
-    <loc>https://bolsum.github.io/garment-costing.html</loc>
-    <lastmod>2026-09-25</lastmod>
-  </url>
-  <url>
-    <loc>https://bolsum.github.io/for-buyers.html</loc>
-    <lastmod>2026-09-25</lastmod>
-  </url>
-  <url>
-    <loc>https://bolsum.github.io/buyer-outreach.html</loc>
-    <lastmod>2026-09-25</lastmod>
-  </url>
+<url><loc>https://bolsum.github.io/</loc></url>
+<url><loc>https://bolsum.github.io/apparel-sourcing-bangladesh.html</loc></url>
+<url><loc>https://bolsum.github.io/knitwear-sourcing.html</loc></url>
+<url><loc>https://bolsum.github.io/apparel-product-development.html</loc></url>
+<url><loc>https://bolsum.github.io/apparel-sampling.html</loc></url>
+<url><loc>https://bolsum.github.io/garment-costing.html</loc></url>
+<url><loc>https://bolsum.github.io/for-buyers.html</loc></url>
+<url><loc>https://bolsum.github.io/buyer-outreach.html</loc></url>
 </urlset>
