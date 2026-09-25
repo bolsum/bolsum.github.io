@@ -31,7 +31,7 @@
 </div>
 </div>
 <script>
-const PIN='4729';
+const PIN='8989';
 const gate=document.getElementById('pin-gate');
 const protectedContent=document.getElementById('protected-content');
 document.getElementById('pin-form').addEventListener('submit',function(e){e.preventDefault();const input=document.getElementById('pin');if(input.value===PIN){gate.style.display='none';protectedContent.style.display='block';init();}else{document.getElementById('pin-error').textContent='Incorrect PIN';input.value='';input.focus();}});
