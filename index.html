@@ -22,6 +22,10 @@
 <meta property="og:description" content="Practical Bangladesh sourcing support for independent fashion brands: supplier coordination, costing, sampling and production follow-up.">
 <meta property="og:url" content="https://bolsum.github.io/">
 <meta property="og:site_name" content="BOLSUM">
+<meta property="og:image" content="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?auto=format&fit=crop&w=1600&q=85">
+<meta property="og:image:alt" content="Apparel collection for BOLSUM Bangladesh sourcing">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?auto=format&fit=crop&w=1600&q=85">
 <meta property="og:locale" content="en_US">
 
 <!-- Twitter / X -->
@@ -153,6 +157,9 @@ footer{gap:20px;align-items:flex-start}
 @media(max-width:900px){.container{width:calc(100% - 34px)}nav{position:relative}.hero{grid-template-columns:1fr;gap:35px;padding:48px 0 60px}.heroart{height:410px}.hero h1{font-size:clamp(56px,11vw,78px)}section{padding:65px 0}.contact{padding:38px 25px}}
 @media(max-width:520px){.heroart{height:360px}.hero-proof{line-height:1.8!important}.artcopy{left:27px;bottom:28px}.artcopy strong{font-size:38px}.hero h1{font-size:55px}.btn{width:100%}.actions{display:grid}.contact .btn{width:max-content}}
 
+
+.nav-toggle{display:none;border:1px solid var(--line);background:var(--paper);color:var(--ink);padding:10px 12px;font:600 11px "DM Sans",sans-serif;letter-spacing:.08em;text-transform:uppercase;cursor:pointer}
+@media(max-width:900px){nav{position:relative}.nav-toggle{display:inline-flex;align-items:center;gap:9px}.nav.open{display:flex;position:absolute;top:100%;left:0;right:0;z-index:30;flex-direction:column;gap:0;background:var(--paper);border:1px solid var(--line);padding:8px 16px;box-shadow:0 14px 30px rgba(20,37,31,.12)}.nav.open a{padding:13px 0;border-bottom:1px solid var(--line);font-size:11px}.nav.open a:last-child{border-bottom:0}}
 </style>
 </head>
 <body>
@@ -160,7 +167,8 @@ footer{gap:20px;align-items:flex-start}
 <div class="container">
 <nav aria-label="Primary navigation">
 <a class="brand" href="#">BOLSUM<small>GLOBAL SOURCING</small></a>
-<div class="nav"><a href="#about">About</a><a href="#services">Services</a><a href="#expertise">Expertise</a><a href="#process">Process</a><a href="#contact">Contact</a><a href="https://www.linkedin.com/in/bokulr" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a></div>
+<button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-links">Menu <span aria-hidden="true">☰</span></button>
+<div class="nav" id="primary-links"><a href="#about">About</a><a href="#services">Services</a><a href="#expertise">Expertise</a><a href="#process">Process</a><a href="#contact">Contact</a><a href="https://www.linkedin.com/in/bokulr" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a></div>
 </nav>
 
 <main id="main-content">
@@ -333,6 +341,17 @@ footer{gap:20px;align-items:flex-start}
 </div>
 
 <script>
+const navToggle = document.querySelector('.nav-toggle');
+const primaryLinks = document.getElementById('primary-links');
+navToggle?.addEventListener('click', function(){
+  const open = primaryLinks?.classList.toggle('open') || false;
+  navToggle.setAttribute('aria-expanded', String(open));
+});
+primaryLinks?.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+  primaryLinks.classList.remove('open');
+  navToggle?.setAttribute('aria-expanded', 'false');
+}));
+
 document.getElementById('project-form')?.addEventListener('submit', function(e){
   e.preventDefault();
   const d = new FormData(this);
@@ -345,10 +364,6 @@ document.getElementById('project-form')?.addEventListener('submit', function(e){
     'Product: ' + d.get('product'),
     'Quantity: ' + (d.get('quantity') || 'Not provided'),
     'Target price: ' + (d.get('target') || 'Not provided'),
-    'Delivery: ' + (d.get('delivery') || 'Not provided'),
-    'Development stage: ' + d.get('stage'),
-    'Buyer country: ' + (d.get('country') || 'Not provided'),
-    'Preferred contact: ' + d.get('contact'),
     '',
     'Project details:',
     d.get('details')
