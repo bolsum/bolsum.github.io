@@ -162,6 +162,24 @@ footer{gap:20px;align-items:flex-start}
 .nav-toggle{display:none;border:1px solid var(--line);background:var(--paper);color:var(--ink);padding:10px 12px;font:600 11px "DM Sans",sans-serif;letter-spacing:.08em;text-transform:uppercase;cursor:pointer}
 @media(max-width:900px){nav{position:relative}.nav-toggle{display:inline-flex;align-items:center;gap:9px}.nav.open{display:flex;position:absolute;top:100%;left:0;right:0;z-index:30;flex-direction:column;gap:0;background:var(--paper);border:1px solid var(--line);padding:8px 16px;box-shadow:0 14px 30px rgba(20,37,31,.12)}.nav.open a{padding:13px 0;border-bottom:1px solid var(--line);font-size:11px}.nav.open a:last-child{border-bottom:0}}
 </style>
+<style>
+/* BOLSUM visual refresh — responsive editorial image gallery */
+.bolsum-gallery{padding:76px 0 88px;border-top:1px solid var(--line,#dce2da)}
+.bolsum-gallery .gallery-head{display:flex;justify-content:space-between;align-items:end;gap:28px;margin-bottom:28px}
+.bolsum-gallery .gallery-head p{max-width:440px;color:var(--muted,#606d66);font-size:14px;margin:0}
+.bolsum-gallery .gallery-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:14px}
+.bolsum-gallery figure{margin:0;position:relative;overflow:hidden;min-height:330px;background:#dce4db;border-radius:3px}
+.bolsum-gallery figure:first-child{min-height:430px;grid-row:span 2}
+.bolsum-gallery img{display:block;width:100%;height:100%;min-height:inherit;object-fit:cover;position:absolute;inset:0;transition:transform .6s ease}
+.bolsum-gallery figure:hover img{transform:scale(1.045)}
+.bolsum-gallery figure:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(13,30,23,.78),transparent 62%)}
+.bolsum-gallery figcaption{position:absolute;z-index:1;left:24px;right:24px;bottom:23px;color:#fff}
+.bolsum-gallery figcaption span{display:block;font-size:9px;letter-spacing:.19em;text-transform:uppercase;color:#e4c7b1;margin-bottom:8px}
+.bolsum-gallery figcaption strong{font:600 clamp(22px,2.4vw,32px)/1.05 "Playfair Display",Georgia,serif}
+.bolsum-gallery .gallery-note{font-size:11px;color:var(--muted,#606d66);margin:15px 0 0}
+@media(max-width:760px){.bolsum-gallery{padding:58px 0}.bolsum-gallery .gallery-head{display:block}.bolsum-gallery .gallery-head p{margin-top:14px}.bolsum-gallery .gallery-grid{grid-template-columns:1fr 1fr}.bolsum-gallery figure,.bolsum-gallery figure:first-child{min-height:260px;grid-row:auto}.bolsum-gallery figure:first-child{grid-column:span 2;min-height:340px}}
+@media(max-width:430px){.bolsum-gallery .gallery-grid{grid-template-columns:1fr}.bolsum-gallery figure,.bolsum-gallery figure:first-child{grid-column:auto;min-height:300px}}
+</style>
 </head>
 <body>
 <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -235,6 +253,11 @@ footer{gap:20px;align-items:flex-start}
 </section>
 
 
+<section class="bolsum-gallery" aria-label="BOLSUM apparel sourcing and product development gallery">
+ <div class="gallery-head"><div><div class="label">BOLSUM / Visual journal</div><h2 class="title">A closer look at<br>the product journey.</h2></div><p>From apparel selection and fabric detail to development, sampling and production coordination — explore the work behind a well-managed sourcing process.</p></div>
+ <div class="gallery-grid"><figure><img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?auto=format&fit=crop&w=1400&q=85" alt="Apparel collection displayed on clothing rails" width="1400" height="1000" loading="lazy"><figcaption><span>01 / APPAREL SOURCING</span><strong>A considered product range</strong></figcaption></figure><figure><img src="https://images.unsplash.com/photo-1583743814966-8936f37f4678?auto=format&fit=crop&w=1000&q=85" alt="Cotton T-shirt garment and fabric detail" width="1400" height="1000" loading="lazy"><figcaption><span>02 / KNITWEAR</span><strong>Fabric, fit and finish</strong></figcaption></figure><figure><img src="https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?auto=format&fit=crop&w=1000&q=85" alt="Apparel design and development details" width="1400" height="1000" loading="lazy"><figcaption><span>03 / DEVELOPMENT</span><strong>From idea to sample</strong></figcaption></figure><figure><img src="https://images.unsplash.com/photo-1551232864-3f0890e580d9?auto=format&fit=crop&w=1000&q=85" alt="Garments arranged for sample review" width="1400" height="1000" loading="lazy"><figcaption><span>04 / SAMPLING</span><strong>Review every detail</strong></figcaption></figure><figure><img src="https://images.unsplash.com/photo-1582735689369-4fe89db7114c?auto=format&fit=crop&w=1000&q=85" alt="Textile and garment production preparation" width="1400" height="1000" loading="lazy"><figcaption><span>05 / PRODUCTION</span><strong>Coordinated execution</strong></figcaption></figure></div>
+ <p class="gallery-note">Illustrative editorial imagery. Specific product, supplier and production details are confirmed for each project.</p>
+ </section>
 <section id="bangladesh-sourcing">
   <div class="split">
     <div>
