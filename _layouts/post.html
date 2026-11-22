@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#173a2d">
+<meta name="author" content="BOLSUM">
+<title>{{ page.title | escape }} | BOLSUM Insights</title>
+<meta name="description" content="{{ page.description | default: page.excerpt | strip_html | normalize_whitespace | truncate: 155 | escape }}">
+<link rel="canonical" href="{{ page.url | absolute_url }}">
+<meta property="og:type" content="article">
+<meta property="og:title" content="{{ page.title | escape }}">
+<meta property="og:description" content="{{ page.description | default: page.excerpt | strip_html | normalize_whitespace | truncate: 155 | escape }}">
+<meta property="og:url" content="{{ page.url | absolute_url }}">
+{% if page.image %}<meta property="og:image" content="{{ page.image | absolute_url }}">{% endif %}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#14251f;--green:#173a2d;--cream:#f7f6f1;--paper:#fffefa;--accent:#b86d43;--muted:#606d66;--line:#dce2da}
+*{box-sizing:border-box}body{margin:0;background:var(--cream);color:var(--ink);font:400 16px/1.8 "DM Sans",sans-serif}a{color:inherit;text-decoration:none}.container{width:min(900px,calc(100% - 42px));margin:auto}
+nav{height:78px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}.brand{font-weight:700;letter-spacing:.22em;font-size:21px}.brand small{display:block;font-size:7px;letter-spacing:.25em;color:var(--accent);margin-top:-3px}.back{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+article{padding:75px 0 90px}.eyebrow{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);font-weight:700}.article-head h1{font:600 clamp(42px,7vw,68px)/1.08 "Playfair Display",serif;letter-spacing:-.04em;margin:18px 0}.meta{font-size:12px;color:var(--muted);margin:16px 0 28px}.cover{width:100%;max-height:520px;object-fit:cover;margin:10px 0 34px}.summary{font-size:19px;color:var(--muted);line-height:1.6;border-left:3px solid var(--accent);padding-left:20px;margin:0 0 36px}.prose{max-width:720px;margin:auto}.prose h2,.prose h3{font-family:"Playfair Display",serif;line-height:1.2;margin-top:1.8em}.prose img{max-width:100%;height:auto}.prose a{color:#98603e;text-decoration:underline}.tags{display:flex;flex-wrap:wrap;gap:8px;margin:35px 0}.tags span{border:1px solid var(--line);padding:5px 10px;font-size:10px;color:var(--muted)}.bottom{border-top:1px solid var(--line);padding-top:25px;margin-top:60px;display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap;font-size:12px;color:var(--muted)}
+</style>
+</head>
+<body><div class="container">
+<nav><a class="brand" href="/">BOLSUM<small>GLOBAL SOURCING</small></a><a class="back" href="/posts.html">← All posts</a></nav>
+<article>
+<header class="article-head"><div class="eyebrow">BOLSUM / {{ page.category | default: "Insights" | escape }}</div><h1>{{ page.title | escape }}</h1><div class="meta">{{ page.date | date: "%B %-d, %Y" }} · BOLSUM Insights</div>{% if page.image %}<img class="cover" src="{{ page.image | relative_url }}" alt="{{ page.title | escape }}">{% endif %}{% if page.description %}<p class="summary">{{ page.description | escape }}</p>{% endif %}</header>
+<div class="prose">{{ content }}</div>
+{% if page.tags %}<div class="tags">{% assign article_tags = page.tags | split: "," %}{% for tag in article_tags %}<span>{{ tag | strip | escape }}</span>{% endfor %}</div>{% endif %}
+<div class="bottom"><a href="/posts.html">← Back to Posts & Insights</a><a href="https://www.linkedin.com/in/bokulr" target="_blank" rel="noopener noreferrer">Connect with BOLSUM on LinkedIn ↗</a></div>
+</article></div></body></html>
