@@ -46,6 +46,7 @@ content:
       - name: published
         label: Publish this post
         type: boolean
+        default: true
       - name: body
         label: Article content
         type: rich-text
