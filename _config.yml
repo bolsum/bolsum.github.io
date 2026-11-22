@@ -1,0 +1,15 @@
+title: BOLSUM
+description: Apparel sourcing and product development from Bangladesh.
+url: https://bolsum.github.io
+baseurl: ""
+timezone: Asia/Dhaka
+markdown: kramdown
+permalink: /insights/:title/
+future: false
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      published: true
